@@ -6,10 +6,10 @@
 }
 
 :root {
-  --color-primary: #191d2b;
-  --color-secondary: rgb(196, 128, 116);
-  --color-white: #ffffff;
-  --color-black: #000000;
+  --color-primary: #0f2027;
+  --color-secondary: #00b4d8;
+  --color-white: #1e293b;
+  --color-black: #48cae4;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
@@ -17,28 +17,27 @@
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
-  --color-brown: #5b3e31;
-  --color-background: rgb(246, 161, 146);
+  --color-brown: #2a6f97;
+  --color-background: #f0f9ff;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode {
-  --color-primary: #9c70b2;
-  --color-secondary: rgb(101, 91, 140);
-  --color-white: #ffffff;
-  --color-black: #6379aa;
+  --color-primary: #6c5b7b;
+  --color-secondary: #c07c8f;
+  --color-white: #f8f9fa;
+  --color-black: #f67280;
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
-  --color-grey-2: #b2becd;
+  --color-grey-2: #c0989c;
   --color-grey-3: #243f54;
   --color-grey-4: #454e56;
   --color-grey-5: #828791;
   --color-grey-6: #12181b;
-  --color-brown: rgb(57, 112, 156);
-  --color-background: rgb(21, 18, 108);
+  --color-brown: #355c7d;
+  --color-background: #2c1654;
   --br-sm-2: 14px;
-  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -152,12 +151,12 @@ section {
 }
 
 .theme-btn {
-  top: 3%;
+  top: 5%;
   right: 3%;
   cursor: pointer;
   background-color: var(--color-brown);
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -167,7 +166,7 @@ section {
   transition: all 0.1s ease-in-out;
 }
 .theme-btn:active {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 .theme-btn i {
   font-size: 1.4rem;
@@ -280,7 +279,7 @@ section {
   top: 15px;
   width: 2rem;
   height: 2px;
-  background-color: rgb(118, 113, 113);
+  background-color: var(--color-grey-5);
 }
 .about-container .left-about {
   padding-right: 5rem;
@@ -302,6 +301,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+  padding-bottom: 3rem;
 }
 .about-stats .progress-bars .progress-bar {
   display: flex;
@@ -352,8 +352,11 @@ section {
 .about-stats .progress-bars .progress-bar .progress-con .progress .c {
   width: 80%;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .ReactJs {
-  width: 60%;
+.about-stats .progress-bars .progress-bar .progress-con .progress .reactjs {
+  width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .sql {
+  width: 70%;
 }
 
 .stat-title {
@@ -400,9 +403,10 @@ section {
 }
 .timeline .timeline-item .ti-duration {
   padding: 0.2rem 0.6rem;
-  background-color: var(--color-grey-4);
+  background-color: var(--color-grey-2);
   border-radius: 15px;
   display: inline-block;
+  font-size: 2rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
@@ -413,6 +417,52 @@ section {
   font-weight: 600;
 }
 .timeline .timeline-item h5 span {
+  color: var(--color-secondary);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.experience {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 1px solid var(--color-grey-5);
+  padding-bottom: 3rem;
+}
+
+.experience .ti-duration {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-grey-2);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.experience .ti-icon {
+  position: absolute;
+  left: -39px;
+  top: 0;
+  background-color: var(--color-grey-1);
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience .ti-icon i {
+  color: rgb(96, 156, 206);
+  font-size: 1.7rem;
+}
+
+.experience h5 {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.experience h5 span {
   color: var(--color-secondary);
   font-weight: 500;
   font-size: 1.2rem;
@@ -458,7 +508,7 @@ section {
 }
 .portfolios .portfolio-item .hover-items h3 {
   font-size: 1.5rem;
-  color: var(--color-brown);
+  color: var(--color-primary);
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -623,6 +673,7 @@ section {
 .main-btn .btn-icon {
   background-color: var(--color-brown);
   display: flex;
+  color: var(--color-grey-2);
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -654,13 +705,13 @@ section {
   font-weight: 700;
 }
 .main-title h2 span {
-  color: rgb(246, 161, 146);
+  color: var(--color-black);
 }
 .main-title h2 .bg-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  color: rgba(142, 136, 136, 0.358);
+  color: var(--color-grey-2);
   transition: all 0.4s ease-in-out;
   z-index: -1;
   transform: translate(-50%, -50%);
